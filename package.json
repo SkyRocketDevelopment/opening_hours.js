@@ -43,7 +43,8 @@
   },
   "dependencies": {
     "suncalc": "^1.8.0",
-    "uglify-js": "^2.7.5"
+    "uglify-js": "^2.7.5",
+    "i18next": "^14.0.1"
   },
   "devDependencies": {
     "assert": "^1.4.1",
@@ -60,8 +61,7 @@
     "rollup-plugin-yaml": "^1.0.0",
     "sprintf-js": "1.1.1",
     "timekeeper": "^2.0.0",
-    "uglify-js": "^3.0.15",
-    "i18next": "^14.0.1"
+    "uglify-js": "^3.0.15"
   },
   "peerDependencies": {
     "country-language": "^0.1.7",
