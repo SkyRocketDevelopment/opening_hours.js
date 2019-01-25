@@ -11443,26 +11443,26 @@ var data$50 = { en:{ opening_hours:{ pretty:{ off:"closed",
         "please use English abbreviation ok for ko":"S'il vous plaît utiliser l'abréviation \"__ok__\" pour \"__ko__\"." } } },
   nl:{ opening_hours:{ texts:{ "please use English abbreviation ok for ko":"Neem de engelse afkorting \"__ok__\" voor \"__ko__\" alstublieft." } } } };
 
-if (!i18n.isInitialized()) {
-  i18n.init({
-    fallbackLng: "en",
-    // lngWhitelist: ['en', 'de'],
-    resStore: data$50,
-    getAsync: true,
-    useCookie: true
-    // debug: true,
-  });
-} else {
-  // compat with an app that already initializes i18n
-  for (var lang$1 in data$50) {
+i18n.init({
+  fallbackLng: "en",
+  // lngWhitelist: ['en', 'de'],
+  resStore: data$50,
+  getAsync: true,
+  useCookie: true
+  // debug: true,
+});
+// compat with an app that already initializes i18n
+
+i18n.on("initialized", function(options) {
+  for (var lang in data$50) {
     i18n.addResourceBundle(
-      lang$1,
+      lang,
       "opening_hours",
-      data$50[lang$1]["opening_hours"],
+      data$50[lang]["opening_hours"],
       true
     );
   }
-}
+});
 
 /* jshint laxbreak: true */
 /* jshint boss: true */
